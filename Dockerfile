@@ -32,4 +32,4 @@ RUN echo -e "Docker finished!\n"
 
 EXPOSE 8080
 
-CMD ["java -jar hellowworld.jar -token=${keyjson}"]
+CMD ["java -jar helloworld.jar -token=${keyjson}"]
