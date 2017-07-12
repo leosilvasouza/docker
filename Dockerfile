@@ -17,18 +17,13 @@ RUN export JRE_HOME=/opt/jdk1.8.0_131/jre
 RUN export PATH=$PATH:/opt/jdk1.8.0_131/bin:/opt/jdk1.8.0_131/jre/bin
 RUN cd /tmp/
 RUN wget https://s3-sa-east-1.amazonaws.com/bluesoft-public/desafio/helloworld.jar
-RUN echo -e "Download helloworld.jar finished!"
 
 RUN wget https://s3-sa-east-1.amazonaws.com/bluesoft-public/desafio/token.json
-RUN echo -e "Checking token to run the application"
 
 RUN wget http://dl.fedoraproject.org/pub/epel/7/x86_64/e/epel-release-7-10.noarch.rpm
 RUN rpm -ivh epel-release-7-10.noarch.rpm
 RUN yum -y install jq
 RUN keyjson=$(cat token.json | jq '.token')
-RUN echo -e"Aplication helloworld.jar executed with success!\n"
-
-RUN echo -e "Docker finished!\n"
 
 EXPOSE 8080
 
