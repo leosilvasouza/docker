@@ -1,6 +1,6 @@
 # docker
 # Ambiente criado para deploy da aplicacão HelloWorld.
-# Tendo um Dockerfile e fazer push do ambiente cofigurado no DockerHub com comando:
+# Tendo um Dockerfile e fazer push do ambiente configurado no DockerHub com comando:
 $ docker push leomontt/docker:tagname
 
 
